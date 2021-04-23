@@ -1,0 +1,41 @@
+Code for week 8
+
+#LM for Sale Price with Square feet living space as predictions
+
+```{r , echo = FALSE}
+
+## Including Plots
+sale_lm <- lm(Sale_Price ~ square_feet_total_living    ,data = clean_house_df)
+plot(sale_lm)
+summary(sale_lm)
+```
+
+#LM for Sale Price with Square feet living space, and bathrooms as predictors
+
+
+```{r, echo = FALSE}
+## Including Plots
+Mutiple_lm <- lm(Sale_Price ~ square_feet_total_living + house_baths    ,data = clean_house_df)
+plot(Mutiple_lm)
+summary(Mutiple_lm)
+```
+#LM for Sale Price with Square feet living space, bathroom, and sq_ft_lot as predictors
+
+
+```{r, echo = FALSE}
+## Including Plots
+Mutiple_lm <- lm(Sale_Price ~ square_feet_total_living + house_baths + sq_ft_lot    ,data = clean_house_df)
+plot(Mutiple_lm)
+summary(Mutiple_lm)
+```
+
+## Betas of LM
+
+```{r, echo = FALSE}
+#lm_beta_Clean <- lm.beta(Mutiple_lm)
+#print(lm_beta_Clean)
+
+#summary(lm_beta_Clean)
+
+#coef(lm_beta_Clean)
+```
